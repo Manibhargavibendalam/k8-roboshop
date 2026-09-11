@@ -27,3 +27,13 @@ spec:
       containers:
       - name: mongodb
         image: chintudevops/mongodb:v1
+        readinessProbe: 
+          tcpSocket:
+            port:27017
+          intialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port:27017
+          intialDelaySeconds: 5
+          periodSeconds: 5
