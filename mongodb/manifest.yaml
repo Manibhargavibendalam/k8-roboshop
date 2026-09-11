@@ -28,12 +28,10 @@ spec:
       - name: mongodb
         image: chintudevops/mongodb:v1
         readinessProbe: 
-          tcpSocket:
-            port:27017
+          tcpSocket: "port:27017"
           initialDelaySeconds: 10
           periodSeconds: 10
         livenessProbe:
-          tcpSocket:
-            port:27017
+          tcpSocket: "port:27017"
           initialDelaySeconds: 5
           periodSeconds: 5
