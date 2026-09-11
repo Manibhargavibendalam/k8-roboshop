@@ -9,6 +9,4 @@ metadata:
 spec:
   containers:
   - name: debug 
-    image: nginx
-    ports:
-    - containerPort: 80
+    image: chintudevops/debug:v1
